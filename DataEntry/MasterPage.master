@@ -1,0 +1,168 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["id"] == null || Session["type"]==null)
+        {
+            if (Request.Cookies["Data2"] != null)
+            {
+                HttpCookie c2 = Request.Cookies["Data2"];
+                System.Data.DataTable dt = DataBase.GetData("Users", new string[] { "id" }, new string[] { c2.Values["id"] });
+                if (dt.Rows.Count > 0)
+                {
+                    Session["Name"] = dt.Rows[0]["name"].ToString();
+                    Session["UserName"] = dt.Rows[0]["username"].ToString();
+                    Session["id"] = dt.Rows[0]["id"].ToString();
+                    Session["type"] = dt.Rows[0]["type"].ToString();
+                    Application.Lock();
+                    Application["User" + dt.Rows[0]["id"].ToString()] = "true";
+                    Application.UnLock();
+
+                }
+                else
+                {
+                    c2 = new HttpCookie("Data2");
+                    c2.Values.Add("id", dt.Rows[0]["name"].ToString());
+                    c2.Expires = DateTime.Now.AddDays(-1);
+                    Response.Cookies.Add(c2);
+                    Response.Redirect("../Default.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("../Default.aspx");
+            }
+        }
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../StyleSheet.css" type="text/css" rel="Stylesheet" rev="Stylesheet" />
+    
+</head>
+<body dir="rtl" style="margin:0px 0px 0px 0px">
+    <form id="form1" runat="server">
+    
+        <table class="Maintable" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center" style="height:10px; background-color:#333333">
+                    <img width="100%" src="../Images/Header2.png" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="height:10px;background-color:#ffffff">
+                    <table cellspacing="5" cellpadding="5">
+                        <tr align="center" style="color:#fbd872;">
+                            <td >
+                                <a class="HeaderLink" href="Default.aspx">
+                                <img src="../Images/Home.png" class="IconImg" /><br />
+                                الرئيسية
+                                </a>
+                            </td>
+                            <td>
+                                <a class="HeaderLink" href="Loads.aspx">
+                                <img src="../Images/Car.png" class="IconImg" /><br />
+                                الحمولات
+                                </a>
+                            </td>
+                           <%if (Session["type"].ToString().Equals("2") || Session["type"].ToString().Equals("3"))
+                             { %>
+                            <td>
+                                <a class="HeaderLink" href="AddNewLoad.aspx">
+                                <img src="../Images/AddNewLoad.png" class="IconImg" /><br />
+                                ادخال حمولة
+                                </a>
+                            </td>
+                            <%} %>
+                            <%if (Session["type"].ToString().Equals("3"))
+                              { %>
+                            <td>
+                                <a class="HeaderLink" href="CarArrival.aspx">
+                                <img src="../Images/CarArival.png" class="IconImg" /><br />
+                                استقبال المركبات
+                                </a>
+                            </td>
+                            <td>
+                                <a class="HeaderLink" href="Karaj.aspx">
+                                <img src="../Images/CarArival.png" class="IconImg" /><br />
+                                الكراج
+                                </a>
+                            </td>
+                            <%} %>
+                            
+                            
+                            
+                            
+                            <td>
+                                <a class="HeaderLink" href="Drivers.aspx">
+                                <img src="../Images/Drivers.png" class="IconImg" /><br />
+                                السواقين
+                                </a>
+                            </td>
+                            <td>
+                                <a class="HeaderLink" href="Cars.aspx">
+                                <img src="../Images/Car.png" class="IconImg" /><br />
+                                القاطرات
+                                </a>
+                            </td>
+                            <%if (Session["type"].ToString().Equals("2") || Session["type"].ToString().Equals("3"))
+                              { %>
+                            <td>
+                                <a class="HeaderLink" href="Trailers.aspx">
+                                <img src="../Images/CarBack.png" class="IconImg" /><br />
+                                المقطورات
+                                </a>
+                            </td>
+                            <%} %>
+                            
+                             <td>
+                                <a class="HeaderLink" href="Reports.aspx">
+                                <img src="../Images/Report.png" class="IconImg" /><br />
+                                تقارير
+                                </a>
+                            </td>
+                            
+                            <td>
+                                <a class="HeaderLink" href="LogOut.aspx">
+                                <img src="../Images/LogOut.png" class="IconImg" /><br />
+                                تسجيل الخروج
+                                </a>
+                            </td>
+                        </tr>
+                         
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="height:2px;background-color:#333333;">
+            </tr>
+            <tr>
+                <td>
+                    <br />
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                    <br />
+                </td>
+            </tr>
+            <tr>
+                <td class="Footer">
+                    جميع الحقوق محفوظة لشركة ابو حسين الذيابات للنقل 
+                    &#169; 2010&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تصميم و برمجة : سامر الخطيب
+                    <br />
+                    <br />
+                </td>
+            </tr>
+        </table>    
+        
+        
+    
+    </form>
+</body>
+</html>

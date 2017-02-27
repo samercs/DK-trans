@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["id"] == null || Session["type"] == null)
+        {
+            Response.Redirect("../Default.aspx");
+        }
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../StyleSheet.css" type="text/css" rel="Stylesheet" rev="Stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body dir="rtl" style="background-color:#ffffff;">
+    <form id="form1" runat="server">
+    <table  style="background-color:#ffffff;" width="100%">
+        
+        <tr>
+            <td style="height:10px;"  valign="top" class="Title">
+                <asp:ContentPlaceHolder ID="Header" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top">
+                <asp:ContentPlaceHolder ID="Body" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        
+    </table>
+    </form>
+</body>
+</html>
