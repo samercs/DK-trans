@@ -96,38 +96,6 @@
                             </td>
                             <%} %>
                             
-                            
-                            
-                            
-                            <td>
-                                <a class="HeaderLink" href="Drivers.aspx">
-                                <img src="../Images/Drivers.png" class="IconImg" /><br />
-                                السواقين
-                                </a>
-                            </td>
-                            <td>
-                                <a class="HeaderLink" href="Cars.aspx">
-                                <img src="../Images/Car.png" class="IconImg" /><br />
-                                القاطرات
-                                </a>
-                            </td>
-                            <%if (Session["type"].ToString().Equals("2") || Session["type"].ToString().Equals("3"))
-                              { %>
-                            <td>
-                                <a class="HeaderLink" href="Trailers.aspx">
-                                <img src="../Images/CarBack.png" class="IconImg" /><br />
-                                المقطورات
-                                </a>
-                            </td>
-                            <%} %>
-                            
-                             <td>
-                                <a class="HeaderLink" href="Reports.aspx">
-                                <img src="../Images/Report.png" class="IconImg" /><br />
-                                تقارير
-                                </a>
-                            </td>
-                            
                             <td>
                                 <a class="HeaderLink" href="LogOut.aspx">
                                 <img src="../Images/LogOut.png" class="IconImg" /><br />
