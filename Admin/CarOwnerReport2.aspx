@@ -1,4 +1,4 @@
-<%@ Page Title="สÞัํั วแใวแ฿ํไ" Language="C#" MasterPageFile="Reports.master" %>
+๏ปฟ<%@ Page Title="ุชูุฑูุฑ ุงูู…ุงูููู ูุฑุคูุณ ุงููุงุทุฑุฉ" Language="C#" MasterPageFile="Reports.master" %>
 
 <script runat="server">
 
@@ -96,16 +96,16 @@
         </tr>
         <tr>
             <td colspan="2" align="center">
-                ใฤำำษ วศๆ อำํไ วแะํวศวส แแไÞแ
+                ุชูุฑูุฑ ุงูู…ุงูููู ูุฑุคูุณ ุงููุงุทุฑุฉ
             </td>
         </tr>
         <tr>
             <td colspan="2" align="center">
-                ฿ิÝ อั฿วส วแัวำ วแÞวุั แิั฿ษ <%=DataBase.GetPName("Owners","name","id",Session["owner"].ToString()) %>
+                ุงูู…ุงูู <%=DataBase.GetPName("Owners","name","id",Session["owner"].ToString()) %>
             </td>
         </tr>
         <tr>
-            <td colspan="2" align="center"> ใไุÞษ วแสอใํแ &nbsp;&nbsp;&nbsp;<%=DataBase.GetPName("Centers","name","id",Session["from"].ToString()) %>&nbsp;&nbsp;&nbsp; ใไุÞษ วแสÝัํÛ &nbsp;&nbsp;&nbsp;<%=DataBase.GetPName("Centers","name","id",Session["to"].ToString()) %></td>
+            <td colspan="2" align="center"> ู…ู &nbsp;&nbsp;&nbsp;<%=DataBase.GetPName("Centers","name","id",Session["from"].ToString()) %>&nbsp;&nbsp;&nbsp; ุงูู &nbsp;&nbsp;&nbsp;<%=DataBase.GetPName("Centers","name","id",Session["to"].ToString()) %></td>
         </tr>
     </table>
     
@@ -140,7 +140,7 @@
         <RowStyle  BackColor="#F7F6F3" HorizontalAlign="Center" ForeColor="#333333" />
         <EmptyDataRowStyle HorizontalAlign="Center" CssClass="Title" />
         <EmptyDataTemplate>
-            แว ํๆฬฯ ศํวไวส
+            ูุง ููุฌุฏ ุจูุงูุงุช
         </EmptyDataTemplate>
         <Columns>
             
@@ -150,41 +150,41 @@
                 </ItemTemplate>
             </asp:TemplateField>
             
-            <asp:TemplateField HeaderText="ใไ" SortExpression="FromId">
+            <asp:TemplateField HeaderText="ู…ู" SortExpression="FromId">
                 <ItemTemplate>
                     <asp:Label ID="Label1" runat="server" Text='<%#Eval("FromId") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="วแ์" SortExpression="ToId">
+            <asp:TemplateField HeaderText="ุงูู" SortExpression="ToId">
                 <ItemTemplate>
                     <asp:Label ID="Label2" runat="server" Text='<%#Eval("ToId") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField DataField="Driver_Name" HeaderText="วำใ วแำวฦÞ" 
+            <asp:BoundField DataField="Driver_Name" HeaderText="ุงุณู… ุงูุณุงุฆู" 
                 SortExpression="Driver_Name" />
-            <asp:BoundField DataField="Car_Number" HeaderText="ัÞใ วแÞวุัษ" 
+            <asp:BoundField DataField="Car_Number" HeaderText="ุฑูู… ุงููุงุทุฑ" 
                 SortExpression="Car_Number" />
-            <asp:BoundField DataField="Trailer_Number" HeaderText="ัÞใ วแใÞุๆัษ" 
+            <asp:BoundField DataField="Trailer_Number" HeaderText="ุฑูู… ุงูู…ูุทูุฑุฉ" 
                 SortExpression="Trailer_Number" />
             <asp:BoundField DataField="LeavingTime1" 
-                HeaderText="สวัํฮ วแสอใํแ" DataFormatString="{0:dd/MM/yyyy}" SortExpression="LeavingTime1" />
+                HeaderText="ุชุงุฑูุฎ ุงูู…ุบุงุฏุฑุฉ" DataFormatString="{0:dd/MM/yyyy}" SortExpression="LeavingTime1" />
                 
             <asp:BoundField DataField="ArrivalTime1" 
-                HeaderText="สวัํฮ วแสÝัํÛ" DataFormatString="{0:dd/MM/yyyy}" SortExpression="ArrivalTime1" />
+                HeaderText="ุชุงุฑูุฎ ุงููุตูู" DataFormatString="{0:dd/MM/yyyy}" SortExpression="ArrivalTime1" />
             
             <asp:BoundField DataField="LoadNo" 
-                HeaderText="ัÞใ วแสอใํแ" SortExpression="LoadNo" /> 
+                HeaderText="ุฑูู… ุงูุชุญู…ูู" SortExpression="LoadNo" /> 
             
             <asp:BoundField DataField="EmptyingNo" 
-                HeaderText="ัÞใ วแสÝัํÛ" SortExpression="EmptyingNo" />
+                HeaderText="ุฑูู… ุงูุชูุฑูุบ" SortExpression="EmptyingNo" />
             
             <asp:BoundField DataFormatString="{0:###,###,###}" DataField="Tonnage" 
-                HeaderText="วแอใๆแษ" SortExpression="Tonnage" />  
+                HeaderText="ุงูุญู…ููุฉ" SortExpression="Tonnage" />  
              
            <asp:BoundField DataFormatString="{0:###,###,###}" DataField="Tonnage2" 
-                HeaderText="ๆาไ วแสÝัํÛ" SortExpression="Tonnage2" />   
+                HeaderText="ุงูุชูุฑูุบ" SortExpression="Tonnage2" />   
                 
-           <asp:TemplateField HeaderText="วแๆาไ วแใีัๆÝ">
+           <asp:TemplateField HeaderText="ุงููุฒู ุงูู…ุตุฑูู">
                 <ItemTemplate>
                     <asp:HiddenField ID="tmp1" Value='<%#Eval("Tonnage") %>' runat="server" />
                     <asp:HiddenField ID="tmp2" Value='<%#Eval("Tonnage2") %>' runat="server" />
@@ -212,18 +212,18 @@
     <table class="tr1" width="98%">
         <tr>
             <td>
-                ฺฯฯ วแไÞแวส : <%=GridView1.Rows.Count %>
+                ุนุฏุฏ ุงูุญู…ููุงุช : <%=GridView1.Rows.Count %>
             </td>
             
             <td>
-                ใฬใๆฺ วๆาวไ วแสอใํแ : <%=GetSum(10).ToString("###,###,###") %>
+                ู…ุฌู…ูุน ุงูุชุญู…ููุงุช : <%=GetSum(10).ToString("###,###,###") %>
             </td>
             
             <td>
-                ใฬใๆฺ วๆาวไ วแสÝัํÛ : <%=GetSum(11).ToString("###,###,###")%>
+                ู…ุฌู…ูุน ุงูุชูุฑูุบ : <%=GetSum(11).ToString("###,###,###")%>
             </td>
             <td>
-                ใฬใๆฺ วแๆาไ วแใีัๆÝ : <%=GetSum(12,"r").ToString("###,###,###")%>
+                ู…ุฌู…ูุน ุงููุฒู ุงูู…ุตุฑูู : <%=GetSum(12,"r").ToString("###,###,###")%>
             </td>
         </tr>
     </table>

@@ -167,8 +167,8 @@
             </tr>
             <tr>
                 <td class="Footer">
-                    جميع الحقوق محفوظة لشركة ابو حسين الذيابات للنقل 
-                    &#169; 2010&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تصميم و برمجة : سامر الخطيب
+                    جميع الحقوق محفوظة لشركة محمود فتح الخطيب و شركائه 
+                    &#169; <%=DateTime.Now.Year %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; تصميم و برمجة : سامر الخطيب
                     <br />
                     <br />
                 </td>

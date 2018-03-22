@@ -1,4 +1,4 @@
-<%@ Page Title="╩▐╤э╤ ╟су╟с▀эф" Language="C#" MasterPageFile="Reports.master" %>
+я╗┐<%@ Page Title="	╪к┘В╪▒┘К╪▒ ╪з┘Д┘Е╪з┘Д┘Г┘К┘Ж ┘Д╪▒╪д┘И╪│ ╪з┘Д┘В╪з╪╖╪▒╪й" Language="C#" MasterPageFile="Reports.master" %>
 
 <script runat="server">
 
@@ -79,14 +79,14 @@
     <table class="LogInTable" align="center">
         <tr>
             <td class="Title">
-                 ╩▐╤э╤ ═╤▀╟╩ ╙э╟╤╟╩ ╟су╟с▀эф ╟с╤─ц╙
+                ╪к┘В╪▒┘К╪▒ ╪з┘Д┘Е╪з┘Д┘Г┘К┘Ж ┘Д╪▒╪д┘И╪│ ╪з┘Д┘В╪з╪╖╪▒╪й
             </td>
         </tr>
         <tr>
             <td>
                 <table>
                     <tr class="tr2">
-                        <td>уф ╩╟╤э╬</td>
+                        <td>┘Е┘Ж ╪к╪з╪▒┘К╪о</td>
                         <td>
                             <asp:DropDownList ID="day1" runat="server">
                             </asp:DropDownList> - 
@@ -95,7 +95,7 @@
                             <asp:DropDownList ID="year1" runat="server">
                             </asp:DropDownList>
                         </td>
-                        <td>╟сь ╩╟╤э╬</td>
+                        <td>╪з┘Д┘Й ╪к╪з╪▒┘К╪о</td>
                         <td>
                             <asp:DropDownList ID="day2" runat="server">
                             </asp:DropDownList> - 
@@ -105,7 +105,7 @@
                             </asp:DropDownList>
                         </td>
                         <td>
-                           ╟су╟с▀ 
+                           ╪з┘Д┘Е╪з┘Д┘Г 
                         </td>
                         <td>
                             <asp:DropDownList ID="DropDownList1" runat="server" 
@@ -116,7 +116,7 @@
                                 SelectCommand="SELECT [ID], [Name] FROM [Owners]"></asp:SqlDataSource>
                         </td>
                         <td>
-                            уф 
+                            ┘Е┘Ж 
                         </td>
                         <td>
                             <asp:SqlDataSource ID="SqlDataSource3" runat="server" 
@@ -127,7 +127,7 @@
                             </asp:DropDownList>
                         </td>
                         <td>
-                            ╟сь 
+                            ╪з┘Д┘Й 
                         </td>
                         <td>
                            
@@ -136,7 +136,7 @@
                             </asp:DropDownList>
                         </td>
                         <td align="center">
-                             <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">╩ф▌э╨</asp:LinkButton>                             
+                             <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">╪к┘Ж┘Б┘К╪░</asp:LinkButton>                             
                         </td>
                     </tr>
                     

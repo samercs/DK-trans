@@ -28,7 +28,7 @@
         </tr>
         <tr>
             <td colspan="2" align="center">
-                مؤسسة ابو حسين الذيابات للنقل
+                
             </td>
         </tr>
         <tr>

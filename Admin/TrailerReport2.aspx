@@ -96,7 +96,7 @@
     <table align="center">
         <tr>
             <td class="Title">
-                مؤسسة ابو حسين الذيابات للنقل
+                
                 <br />
                 تقرير حركات مقطورة
             </td>

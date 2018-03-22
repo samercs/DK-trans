@@ -94,7 +94,7 @@
     <table style="font-size:12px;color:Black;" align="center">
         <tr>
             <td>
-                مؤسسة ابو حسين الذيابات للنقل
+                
                 <br />
                 تقرير حركات سيارات المالكين
             </td>
