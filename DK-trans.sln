@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DK-trans", ".", "{BFD1D922-0F0B-4002-A515-CD8C7D9C4779}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56373"
+		Debug.AspNetCompiler.PhysicalPath = "D:\Code\Personal\DK-trans\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56373\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56373"
+		Release.AspNetCompiler.PhysicalPath = "D:\Code\Personal\DK-trans\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56373\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56373"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFD1D922-0F0B-4002-A515-CD8C7D9C4779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFD1D922-0F0B-4002-A515-CD8C7D9C4779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {63FCC12D-6713-4478-B585-2F8FC6A161EC}
+	EndGlobalSection
+EndGlobal
