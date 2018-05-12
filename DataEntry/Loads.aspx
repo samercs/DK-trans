@@ -352,10 +352,6 @@
     </Triggers>
     <ContentTemplate>
     
-   
-    
-    
-    
     <table width="100%" align="center" class="DataEnterTable">
         <tr>
             <td class="Title">
