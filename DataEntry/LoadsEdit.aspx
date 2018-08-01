@@ -566,7 +566,7 @@
                             <asp:TextBox ID="TextBox1" CssClass="Text" runat="server"></asp:TextBox>
                             <asp:RangeValidator ID="RangeValidator1" runat="server" 
                                 ControlToValidate="TextBox1" ErrorMessage="الرجاء التاكد من كمية الحمولة" 
-                                MaximumValue="50000" MinimumValue="0" SetFocusOnError="True" Type="Integer" 
+                                MaximumValue="70000" MinimumValue="0" SetFocusOnError="True" Type="Integer" 
                                 ValidationGroup="g1">*</asp:RangeValidator>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                                 ControlToValidate="TextBox1" ErrorMessage="الرجاء ادخال الحمولة" 
